@@ -2,10 +2,10 @@
 
 # Note: 
 
-This is for installing *NEW* instances of the iond service. This script does not backup any wallet data.
+This is for installing **NEW** instances of the iond service. This script does not backup any wallet data.
 My code is completely open, but piping to python/bash can be dangerous. Please review the code.
 
-# You may have to install some dependencies. To install run the following:
+**You may have to install some dependencies. To install run the following:**
 
 apt-get install curl python-minimal python-tk -y
 
