@@ -2,6 +2,7 @@
 
 # Note: 
 
+This is for installing *NEW* instances of the iond service. This script does not backup any wallet data.
 My code is completely open, but piping to python/bash can be dangerous. Please review the code.
 
 # You may have to install some dependencies. To install run the following:
