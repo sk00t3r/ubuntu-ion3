@@ -72,7 +72,7 @@ cd ~/.ioncoin/
   echo " "
   read -p "#### Press any key when you are ready to continue ####"
   echo " "
-  wget https://raw.githubusercontent.com/sk00t3r/linux-ion/rebase/ioncoin.conf -O ioncoin.conf
+  wget https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/ioncoin.conf -O ioncoin.conf
   nano ioncoin.conf
   mv ioncoin.conf ~/.ioncoin/ioncoin.conf
 fi
