@@ -22,6 +22,14 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get update -y
 clear
+echo "#### Creating Swap ####"
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+echo "/swapfile none swap sw 0 0" >> /etc/fstab
+clear
 echo "#### Installing Dependencies ####"
 echo " "
 sudo apt-get install software-properties-common -y 
