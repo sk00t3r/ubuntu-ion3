@@ -1,4 +1,4 @@
-# Installing The ion 3.x.x wallet on Ubuntu.
+# Installing the iond 3.x.x wallet on Ubuntu.
 
 # Note: 
 
