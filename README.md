@@ -1,4 +1,4 @@
-# Installing the iond 3.x.x wallet on Ubuntu.
+# Simple script for installing the iond 3.x.x wallet on Ubuntu.
 
 # Please read all of the following carefully: 
 
