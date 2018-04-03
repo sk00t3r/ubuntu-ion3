@@ -70,16 +70,15 @@ cd ion
 make
 make install
 cd ~/.ioncoin/
-  clear
-  echo "#### Please set a username and password, the password should be long and random ####"
-  echo "#### Ctrl + X, Y, Enter to save file and exit ####"
-  echo " "
-  read -p "#### Press any key when you are ready to continue ####"
-  echo " "
-  wget https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ioncoin.conf -O ioncoin.conf
-  nano ioncoin.conf
-  mv ioncoin.conf ~/.ioncoin/ioncoin.conf
-fi
+clear
+echo "#### Please set a username and password, the password should be long and random ####"
+echo "#### Ctrl + X, Y, Enter to save file and exit ####"
+echo " "
+read -p "#### Press any key when you are ready to continue ####"
+echo " "
+wget https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ioncoin.conf -O ioncoin.conf
+nano ioncoin.conf
+mv ioncoin.conf ~/.ioncoin/ioncoin.conf
 clear
 echo "#### Changing to /usr/local/bin ####"
 echo " "
