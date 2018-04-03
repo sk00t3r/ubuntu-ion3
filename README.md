@@ -2,7 +2,8 @@
 
 # Note: 
 
-This is for installing **NEW** instances of the iond service. This script does not backup any wallet data.
+This is for installing a **NEW** instance of the iond service. This script does create backups of any wallet data (yet). Do not use this to upgrade from ion 2.0 wallets.
+
 My code is completely open, but piping to python/bash can be dangerous. Please review the code.
 
 **You may have to install some dependencies. To install run the following:**
@@ -16,6 +17,10 @@ python <(curl "https://gist.githubusercontent.com/sk00t3r/502e13df096d9da5ffcef1
 # Stopping the iond service:
 
 ion-cli stop
+
+# Useful ion-cli commands:
+
+ion-cli getinfo
 
 # For a list of all the ion-cli commands:
 
