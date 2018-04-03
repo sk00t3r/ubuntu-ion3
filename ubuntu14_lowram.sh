@@ -62,7 +62,7 @@ sudo apt-get install zip -y
 clear
 echo "#### Downloading iond Core ####"
 echo " "
-git clone https://github.com/cevap/ion
+git clone https://github.com/ioncoincore/ion
 clear
 echo "#### Creating ion folder ####"
 echo " "
