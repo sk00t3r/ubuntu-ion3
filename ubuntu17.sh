@@ -50,6 +50,10 @@ echo "#### Downloading iond Core ####"
 echo " "
 git clone https://github.com/cevap/ion
 clear
+echo "#### Creating ion folder ####"
+echo " "
+mkdir ~/.ioncoin/
+clear
 echo "#### Installing iond service ####"
 echo " "
 cd ion
