@@ -7,7 +7,12 @@ clear
 echo "#### Stopping iond ####"
 echo " "
 ion-cli stop
-echo "#### Change to home directory ####"
+echo "### Removing old iond"
+echo " "
+rm -rf /usr/bin/iond
+rm -rf /usr/local/bin/iond
+rm -rf /root/ion
+echo "#### Changing to home directory ####"
 echo " "
 cd ~/
 clear
