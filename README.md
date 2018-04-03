@@ -8,7 +8,7 @@ This script installs the iond daemon with the default xion minting settings. If 
 
 enablezeromint="n" where 0=False and 1=True
 
-zeromintpercentage="n" where n can not be less than 10
+zeromintpercentage="n" where "n" can not be less than 10
 
 
 My code is completely open, but piping to python/bash can be dangerous. Please review the code.
