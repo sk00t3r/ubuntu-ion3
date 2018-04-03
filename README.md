@@ -10,6 +10,7 @@ enablezeromint="n" where 0=False and 1=True
 
 zeromintpercentage="n" where "n" can not be less than 10
 
+# Important note:
 
 My code is completely open, but piping to python/bash can be dangerous. Please review the code.
 
