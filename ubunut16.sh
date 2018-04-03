@@ -78,4 +78,4 @@ cd /usr/local/bin
 echo "#### Starting the iond service ####"
 echo " "
 echo "#### Type" "ion-cli stop" "to quit iond ####"
-iond&
+iond
