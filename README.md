@@ -1,8 +1,8 @@
-# Simple script for installing the iond 3.x.x wallet on Ubuntu.
+# Simple script for installing the iond 3.x.x daemon on Ubuntu.
 
 # Please read all of the following carefully: 
 
-This is for installing a **NEW** instance of the iond service. This script does not create backups of any wallet data (yet). Do not use this to upgrade from ion 2.0 wallets.
+This is for installing a **NEW** instance of the iond daemon. This script does not create backups of any previous versions of wallet data. Do not use this to upgrade from ion 2.0 wallets on the same system.
 
 My code is completely open, but piping to python/bash can be dangerous. Please review the code.
 
