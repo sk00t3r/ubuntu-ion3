@@ -1,6 +1,6 @@
 # Installing the iond 3.x.x wallet on Ubuntu.
 
-# Note: 
+# Please read all of the following carefully: 
 
 This is for installing a **NEW** instance of the iond service. This script does create backups of any wallet data (yet). Do not use this to upgrade from ion 2.0 wallets.
 
