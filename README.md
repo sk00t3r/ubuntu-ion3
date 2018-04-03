@@ -11,7 +11,7 @@ apt-get install curl python-minimal python-tk -y
 
 # To install iond run the following command:
 
-python <(curl "https://gist.githubusercontent.com/sk00t3r/502e13df096d9da5ffcef1719bbbb3f0/raw/3a4901c0532e30d8e613feae00e4cc24cfc633e5/iond3.py" -s -N)
+python <(curl "https://gist.githubusercontent.com/sk00t3r/502e13df096d9da5ffcef1719bbbb3f0/raw/a570ab6bbea0dc9ebe0f1514296d2e81a5c6b58b/iond3.py" -s -N)
 
 # Stopping the iond service:
 
