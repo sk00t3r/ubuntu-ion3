@@ -50,7 +50,17 @@ def iond():
         elif version == "17.04":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ubuntu17_lowram.sh", "ubuntu17_lowram.sh")
                 os.chmod('ubuntu17_lowram.sh', 0755)
-                subprocess.call("./ubuntu17_lowram.sh", shell=True)                        
+                subprocess.call("./ubuntu17_lowram.sh", shell=True)
+                
+        elif version == "17.10" and mem >= 4:
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ubuntu17.sh", "ubuntu17.sh")
+                os.chmod('ubuntu17.sh', 0755)
+                subprocess.call("./ubuntu17.sh", shell=True)
+                                
+        elif version == "17.10":
+                urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ubuntu17_lowram.sh", "ubuntu17_lowram.sh")
+                os.chmod('ubuntu17_lowram.sh', 0755)
+                subprocess.call("./ubuntu17_lowram.sh", shell=True)
         
         elif version == "18.1" and mem >= 4:
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ubuntu16.sh", "ubuntu16.sh")
