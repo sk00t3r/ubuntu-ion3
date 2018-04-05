@@ -17,8 +17,8 @@ echo " "
 cd ~/
 clear
 echo "#### Adding Bitcoin PPA ####"
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:bitcoin/bitcoin
+apt-get install software-properties-common -y
+add-apt-repository ppa:bitcoin/bitcoin -y
 #sudo add-apt-repository ppa:ionomy/ioncoin
 clear
 echo "#### Updating Ubuntu ####"
@@ -30,27 +30,27 @@ sudo apt-get update -y
 clear
 echo "#### Installing Dependencies ####"
 echo " "
-sudo apt-get install software-properties-common -y 
-sudo apt-get install automake -y 
-sudo apt-get install libevent-dev -y
-sudo apt-get install libminiupnpc-dev -y
-sudo apt-get install miniupnpc -y
-sudo apt-get install libzmq3-dev -y
-sudo apt-get install libevent-dev -y
-sudo apt-get install libgmp-dev -y
-sudo apt-get install libboost-all-dev -y
-sudo apt-get install libdb4.8-dev -y
-sudo apt-get install python-software-properties -y 
-sudo apt-get install git -y 
-sudo apt-get install build-essential -y
-sudo apt-get install libtool -y 
-sudo apt-get install autotools-dev -y
-sudo apt-get install autoconf -y
-sudo apt-get install pkg-config -y
-sudo apt-get install libssl-dev -y
-sudo apt-get install libcrypto++-dev -y
-sudo apt-get install libdb4.8++-dev -y
-sudo apt-get install zip -y
+apt-get install software-properties-common -y 
+apt-get install automake -y 
+apt-get install libevent-dev -y
+apt-get install libminiupnpc-dev -y
+apt-get install miniupnpc -y
+apt-get install libzmq3-dev -y
+apt-get install libevent-dev -y
+apt-get install libgmp-dev -y
+apt-get install libboost-all-dev -y
+apt-get install libdb4.8-dev -y
+apt-get install python-software-properties -y 
+apt-get install git -y 
+apt-get install build-essential -y
+apt-get install libtool -y 
+apt-get install autotools-dev -y
+apt-get install autoconf -y
+apt-get install pkg-config -y
+apt-get install libssl-dev -y
+apt-get install libcrypto++-dev -y
+apt-get install libdb4.8++-dev -y
+apt-get install zip -y
 clear
 echo "#### Downloading iond Core ####"
 echo " "
