@@ -23,10 +23,11 @@ add-apt-repository ppa:bitcoin/bitcoin -y
 clear
 echo "#### Updating Ubuntu ####"
 echo " "
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
-sudo apt-get update -y
+apt-get update -y
+apt-get upgrade -y
+apt-get dist-upgrade -y
+apt-get autoremove -y
+apt-get update -y
 clear
 echo "#### Creating Swap ####"
 fallocate -l 4G /swapfile
