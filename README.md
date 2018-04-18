@@ -23,11 +23,11 @@ apt-get install curl python-minimal python-tk -y
 <E: Unable to locate package python-minimal
 <E: Unable to locate package python-tk
 
-sudo add-apt-repository main
-sudo add-apt-repository universe
-sudo add-apt-repository restricted
-sudo add-apt-repository multiverse
-sudo apt update
+sudo add-apt-repository main<br>
+sudo add-apt-repository universe<br>
+sudo add-apt-repository restricted<br>
+sudo add-apt-repository multiverse<br>
+sudo apt update<br>
 
 # To install iond run the following command:
 
