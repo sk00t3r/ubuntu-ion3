@@ -20,8 +20,8 @@ apt-get install curl python-minimal python-tk -y
 
 **Not all VPS hosting companines include the standard repositories. This step is only required if are getting the following errors:**
 
-<E: Unable to locate package python-minimal<br>
-<E: Unable to locate package python-tk
+<E: Unable to locate package python-minimal><br>
+<E: Unable to locate package python-tk>
 
 sudo add-apt-repository main<br>
 sudo add-apt-repository universe<br>
