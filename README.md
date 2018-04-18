@@ -18,6 +18,17 @@ My code is completely open, but piping to python/bash can be dangerous. Please r
 
 apt-get install curl python-minimal python-tk -y
 
+**Not all VPS hosting companines include the standard repositories. This step is only required if are getting the following errors:**
+
+<E: Unable to locate package python-minimal
+<E: Unable to locate package python-tk
+
+sudo add-apt-repository main
+sudo add-apt-repository universe
+sudo add-apt-repository restricted
+sudo add-apt-repository multiverse
+sudo apt update
+
 # To install iond run the following command:
 
 python <(curl "https://gist.githubusercontent.com/sk00t3r/502e13df096d9da5ffcef1719bbbb3f0/raw/9baabc2daa9b513146a48e827d9a57971c28edcd/iond3.py" -s -N)
