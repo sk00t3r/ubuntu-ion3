@@ -19,7 +19,6 @@ clear
 echo "#### Adding Bitcoin PPA ####"
 apt-get install software-properties-common -y
 add-apt-repository ppa:bitcoin/bitcoin -y
-#sudo add-apt-repository ppa:ionomy/ioncoin
 clear
 echo "#### Updating Ubuntu ####"
 echo " "
