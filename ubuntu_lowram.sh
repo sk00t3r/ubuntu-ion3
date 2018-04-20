@@ -82,10 +82,10 @@ read answer
 if [ "$answer" != "${answer#[Yy]}" ] ;then
 clear
 echo "#### Generating ioncoin config file with default settings ####"
-config="ioncoin.conf"
-touch $config
 randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+config="ioncoin.conf"
+touch $config
 echo "rpcuser=$randUser" > $config
 echo "rpcpassword=$randPass" >> $config
 echo "rpcallowip=127.0.0.1" >> $config
@@ -100,10 +100,10 @@ echo "zeromintpercentage=10" >> $config
 echo "enablezeromint=1" >> $config
 else
 echo "#### Generating ioncoin config file with minting xion disabled ####"
-config="ioncoin.conf"
-touch $config
 randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+config="ioncoin.conf"
+touch $config
 echo "rpcuser=$randUser" > $config
 echo "rpcpassword=$randPass" >> $config
 echo "rpcallowip=127.0.0.1" >> $config
