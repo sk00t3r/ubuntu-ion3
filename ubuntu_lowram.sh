@@ -77,15 +77,56 @@ make
 make install
 cd ~/.ioncoin/
 clear
-echo "#### Please set a username and password, the password should be long and random ####"
-echo "#### Ctrl + X, Y, Enter to save file and exit ####"
-echo " "
-read -p "#### Press any key when you are ready to continue ####"
-echo " "
-wget https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ioncoin.conf -O ioncoin.conf
-nano ioncoin.conf
-mv ioncoin.conf ~/.ioncoin/ioncoin.conf
+echo -n "Would you like to use the default config settings (xion minting enabled at 10%) [Y/n]? "
+read answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
 clear
+echo "#### Generating ioncoin config file with default settings ####"
+config=".ioncoin/ioncoin.conf"
+touch $config
+randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+echo "rpcuser=$randUser" > $config
+echo "rpcpassword=$randPass" >> $config
+echo "rpcallowip=127.0.0.1" >> $config
+echo "rpcport=12705" >> $config
+echo "port=12700" >> $config
+echo "listen=1" >> $config
+echo "server=1" >> $config
+echo "server=1" >> $config
+echo "daemon=1" >> $config
+echo "debug=0" >> $config
+echo "zeromintpercentage=10" >> $config
+echo "enablezeromint=1" >> $config
+else
+echo "#### Generating ioncoin config file with minting xion disabled ####"
+config=".ioncoin/ioncoin.conf"
+touch $config
+randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+echo "rpcuser=$randUser" > $config
+echo "rpcpassword=$randPass" >> $config
+echo "rpcallowip=127.0.0.1" >> $config
+echo "rpcport=12705" >> $config
+echo "port=12700" >> $config
+echo "listen=1" >> $config
+echo "server=1" >> $config
+echo "server=1" >> $config
+echo "daemon=1" >> $config
+echo "debug=0" >> $config
+echo "zeromintpercentage=10" >> $config
+echo "enablezeromint=0" >> $config
+fi
+echo "#### Setting iond to run on boot ####"
+ionStart="/root/ionStart.sh"
+touch $ionStart
+echo "#!/bin/sh" > $ionStart
+echo " " >> $ionStart
+echo "echo "$(date +%F_%T) Starting iond miner: $(date)"" >> $ionStart
+echo "/usr/local/bin/iond" >> $ionStart
+echo "echo "$(date +%F_%T) Waiting 15 seconds "" >> $ionStart
+echo "sleep 15" >> $ionStart
+(crontab -l ; echo "@reboot sh /root/ionStart.sh >> /root/ionStart.log 2>&1")| crontab -
 echo "#### Changing to /usr/local/bin ####"
 echo " "
 cd /usr/local/bin
