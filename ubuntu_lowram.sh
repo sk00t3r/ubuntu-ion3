@@ -124,7 +124,7 @@ echo "#!/bin/sh" > $ionStart
 echo " " >> $ionStart
 echo "echo "$(date +%F_%T) Starting iond miner: $(date)"" >> $ionStart
 echo "/usr/local/bin/iond" >> $ionStart
-echo "echo "$(date +%F_%T) Waiting 15 seconds "" >> $ionStart
+echo "echo "$(date +%F_%T) Waiting 15 seconds"" >> $ionStart
 echo "sleep 15" >> $ionStart
 (crontab -l ; echo "@reboot sh /root/ionStart.sh >> /root/ionStart.log 2>&1")| crontab -
 echo "#### Changing to /usr/local/bin ####"
