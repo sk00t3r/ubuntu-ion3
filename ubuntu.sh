@@ -75,6 +75,7 @@ cd ~/.ioncoin/
 clear
 echo -n "Would you like to use the default config settings (xion minting enabled at 10%) [Y/n]? "
 read answer
+clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
 clear
 echo "#### Generating ioncoin config file with default settings ####"
