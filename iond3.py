@@ -12,7 +12,7 @@ mem_bytes = os.sysconf('SC_PAGE_SIZE') * os.sysconf('SC_PHYS_PAGES')
 mem = mem_bytes/(1024.**3)
 
 def iond():
-        if version == "14.04" and mem >= 4 or version == "16.04" and mem >= 4 or version == "16.10" and mem >= 4 or version == "17.04" and mem >= 4 or version == "17.10" and mem >= 4:
+        if version == "14.04" and mem >= "4" or version == "16.04" and mem >= "4" or version == "16.10" and mem >= "4" or version == "17.04" and mem >= "4" or version == "17.10" and mem >= "4":
                 urllib.urlretrieve ("https://raw.githubusercontent.com/sk00t3r/ubuntu-iond3/master/ubuntu.sh", "ubuntu.sh")
                 os.chmod('ubuntu.sh', 0755)
                 subprocess.call("./ubuntu.sh", shell=True)
