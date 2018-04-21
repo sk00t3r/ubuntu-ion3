@@ -149,9 +149,11 @@ sleep 8
 connections=$(ion-cli getconnectioncount)
 if [ "$connections" -ne "0" ] ; then
 clear
-echo "#### Successfully installed and start the ion daemon ####"
+echo "#### Successfully installed and started the ion daemon ####"
 echo " "
 echo "#### Type" "ion-cli stop" "to quit iond ####"
+echo "#### Type" "ion-cli getinfo" "to display info ####"
+echo "#### Type" "ion-cli help" "to list all the available commands ####"
 else
 clear
 echo "#### Something went wrong please re-run the script ####"
