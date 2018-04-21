@@ -6,7 +6,7 @@ This is for installing a **NEW** instance of the iond daemon. This script does n
 
 This script asks if you want the iond daemon to start with the default xion minting settings (xion minting at 10%). If you would like to disable the minting of xion select No to using the default ioncoin config file. If you would like to edit the settings the ioncoin.config file run:
 
-nano ~/.ioncoin/ioncoin.config -- Ctrl + X will save changes then hit Enter to write changes to the file and exit the editor.
+nano ~/.ioncoin/ioncoin.config -- Ctrl + X will ask to save changes. Press Y then Enter to write changes to the file and exit the editor.
 
 enablezeromint="n" where 0=False and 1=True
 
