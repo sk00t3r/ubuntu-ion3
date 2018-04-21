@@ -10,7 +10,11 @@ ion-cli stop
 echo "### Removing old iond ####"
 echo " "
 rm -rf /usr/bin/iond
+rm -rf /usr/bin/ion-cli
+rm -rf /usr/bin/ion-tx
 rm -rf /usr/local/bin/iond
+rm -rf /usr/local/bin/ion-cli
+rm -rf /usr/local/bin/ion-tx
 rm -rf /root/ion
 echo "#### Changing to home directory ####"
 echo " "
