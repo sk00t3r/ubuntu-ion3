@@ -11,7 +11,7 @@ echo "### Removing old iond ####"
 echo " "
 rm -rf /usr/bin/iond
 rm -rf /usr/local/bin/iond
-rm -rf /root/ioncoin
+rm -rf /root/ion
 echo "#### Changing to home directory ####"
 echo " "
 cd ~/
