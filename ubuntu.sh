@@ -7,11 +7,11 @@ clear
 echo "#### Stopping iond ####"
 echo " "
 ion-cli stop
-echo "### Removing old iond"
+echo "### Removing old iond ####"
 echo " "
 rm -rf /usr/bin/iond
 rm -rf /usr/local/bin/iond
-rm -rf /root/ion
+rm -rf /root/ioncoin
 echo "#### Changing to home directory ####"
 echo " "
 cd ~/
@@ -27,6 +27,14 @@ apt-get upgrade -y
 apt-get dist-upgrade -y
 apt-get autoremove -y
 apt-get update -y
+clear
+echo "#### Creating Swap ####"
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+echo "/swapfile none swap sw 0 0" >> /etc/fstab
 clear
 echo "#### Installing Dependencies ####"
 echo " "
@@ -74,9 +82,10 @@ read answer
 if [ "$answer" != "${answer#[Yy]}" ] ;then
 clear
 echo "#### Generating ioncoin config file with default settings ####"
-config="ioncoin.conf"
+sleep 4
 randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+config="ioncoin.conf"
 touch $config
 echo "rpcuser=$randUser" > $config
 echo "rpcpassword=$randPass" >> $config
@@ -92,9 +101,10 @@ echo "zeromintpercentage=10" >> $config
 echo "enablezeromint=1" >> $config
 else
 echo "#### Generating ioncoin config file with minting xion disabled ####"
-config="ioncoin.conf"
+sleep 4
 randUser=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
 randPass=`< /dev/urandom tr -dc A-Za-z0-9 | head -c30`
+config="ioncoin.conf"
 touch $config
 echo "rpcuser=$randUser" > $config
 echo "rpcpassword=$randPass" >> $config
@@ -109,6 +119,7 @@ echo "debug=0" >> $config
 echo "zeromintpercentage=10" >> $config
 echo "enablezeromint=0" >> $config
 fi
+clear
 echo "#### Setting iond to run on boot ####"
 ionStart="/root/ionStart.sh"
 touch $ionStart
@@ -118,11 +129,25 @@ echo "echo "$(date +%F_%T) Starting iond miner: $(date)"" >> $ionStart
 echo "/usr/local/bin/iond" >> $ionStart
 echo "echo "$(date +%F_%T) Waiting 15 seconds"" >> $ionStart
 echo "sleep 15" >> $ionStart
-(crontab -l ; echo "@reboot sh /root/ionStart.sh >> /root/ionStart.log 2>&1")| crontab -
-echo "#### Changing to /usr/local/bin ####"
-echo " "
+touch /var/spool/cron/crontabs/root
+(crontab -l ; echo "@reboot sh /root/ionStart.sh >> /root/ionStart.log 2>&1") | crontab -
+sleep 8
 cd /usr/local/bin
+clear
 echo "#### Starting the iond service ####"
+iond
+sleep 8
+clear
+echo "#### Making sure iond successfully started ####"
+echo " "
+sleep 8
+connections=$(ion-cli getconnectioncount)
+if [ "$connections" -ne "0" ] ; then
+clear
+echo "#### Successfully installed and start the ion daemon ####"
 echo " "
 echo "#### Type" "ion-cli stop" "to quit iond ####"
-iond
+else
+clear
+echo "#### Something went wrong please re-run the script ####"
+fi
